@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "ViewController.h"
+
+@interface ViewController : UITableViewController   
+{
+    NSArray *_products;
+    NSNumberFormatter * _priceFormatter;
+}
+
 
 @end

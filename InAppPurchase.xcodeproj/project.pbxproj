@@ -18,6 +18,9 @@
 		1667593917522BC60028C4E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1667593817522BC60028C4E4 /* Default-568h@2x.png */; };
 		1667593C17522BC60028C4E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667593B17522BC60028C4E4 /* ViewController.m */; };
 		1667593F17522BC60028C4E4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1667593D17522BC60028C4E4 /* ViewController.xib */; };
+		1667597817522EAB0028C4E4 /* AppPurchaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667597717522EAB0028C4E4 /* AppPurchaseHelper.m */; };
+		1667597B17522EB60028C4E4 /* dormioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667597A17522EB60028C4E4 /* dormioHelper.m */; };
+		1667597D17522EFB0028C4E4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1667597C17522EFB0028C4E4 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		1667593A17522BC60028C4E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1667593B17522BC60028C4E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1667593E17522BC60028C4E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		1667597617522EAB0028C4E4 /* AppPurchaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPurchaseHelper.h; sourceTree = "<group>"; };
+		1667597717522EAB0028C4E4 /* AppPurchaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPurchaseHelper.m; sourceTree = "<group>"; };
+		1667597917522EB60028C4E4 /* dormioHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dormioHelper.h; sourceTree = "<group>"; };
+		1667597A17522EB60028C4E4 /* dormioHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dormioHelper.m; sourceTree = "<group>"; };
+		1667597C17522EFB0028C4E4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1667597D17522EFB0028C4E4 /* StoreKit.framework in Frameworks */,
 				1667592317522BC60028C4E4 /* UIKit.framework in Frameworks */,
 				1667592517522BC60028C4E4 /* Foundation.framework in Frameworks */,
 				1667592717522BC60028C4E4 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +82,7 @@
 		1667592117522BC60028C4E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1667597C17522EFB0028C4E4 /* StoreKit.framework */,
 				1667592217522BC60028C4E4 /* UIKit.framework */,
 				1667592417522BC60028C4E4 /* Foundation.framework */,
 				1667592617522BC60028C4E4 /* CoreGraphics.framework */,
@@ -83,6 +93,7 @@
 		1667592817522BC60028C4E4 /* InAppPurchase */ = {
 			isa = PBXGroup;
 			children = (
+				1667594A17522E420028C4E4 /* Classes */,
 				1667593117522BC60028C4E4 /* AppDelegate.h */,
 				1667593217522BC60028C4E4 /* AppDelegate.m */,
 				1667593A17522BC60028C4E4 /* ViewController.h */,
@@ -105,6 +116,17 @@
 				1667593817522BC60028C4E4 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1667594A17522E420028C4E4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1667597917522EB60028C4E4 /* dormioHelper.h */,
+				1667597A17522EB60028C4E4 /* dormioHelper.m */,
+				1667597617522EAB0028C4E4 /* AppPurchaseHelper.h */,
+				1667597717522EAB0028C4E4 /* AppPurchaseHelper.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +198,8 @@
 				1667592F17522BC60028C4E4 /* main.m in Sources */,
 				1667593317522BC60028C4E4 /* AppDelegate.m in Sources */,
 				1667593C17522BC60028C4E4 /* ViewController.m in Sources */,
+				1667597817522EAB0028C4E4 /* AppPurchaseHelper.m in Sources */,
+				1667597B17522EB60028C4E4 /* dormioHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +234,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -225,6 +250,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -238,6 +264,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -246,6 +273,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -292,6 +320,7 @@
 				1667594417522BC60028C4E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
